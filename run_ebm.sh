@@ -3,12 +3,8 @@
 cd config
 bash config_module.sh
 
-#conf="config/config_parameterization.conf"
 conf=$1
 
-#pattern_out="out_dir = "
-#pattern_id="id = "
-#pattern_wrk="wrk_dir = "
 pattern_out=" OUT_DIR="
 pattern_id=" ID="
 pattern_wrk=" WRK_DIR="
@@ -60,8 +56,8 @@ echo EBM_out_dir=$EBM_out_dir
 echo EBM_runid=$EBM_runid
 echo EBM_wrk_dir=$EBM_wrk_dir
 
-cd ../postprocess
-bash postprocess_cdo.sh $EBM_wrk_dir
+#cd ../postprocess
+#bash postprocess_cdo.sh $EBM_wrk_dir
 mkdir -p $EBM_out_dir/$EBM_runid/
 mv $EBM_wrk_dir/* $EBM_out_dir/$EBM_runid/
 rmdir $EBM_wrk_dir

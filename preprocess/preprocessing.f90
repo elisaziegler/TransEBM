@@ -19,7 +19,7 @@ program preprocessing
     print *, 'Preprocess begins:           '
 
 !   CHEETAH: LOADING OF CONFIG FILE
-    call conf%parse_config('../config/orb_config.conf')
+    call conf%parse_config('../config/default_config.conf')
 
     open(20, file = conf%world, status = 'old') 
 

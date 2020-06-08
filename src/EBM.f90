@@ -232,7 +232,7 @@ PROGRAM EBM
 
     ! parse configuration file
     ! CHEETAH: SETTING OF CONFIG FILE
-    call conf%parse_config('../config/orb_config.conf')
+    call conf%parse_config('../config/default_config.conf')
     restart_conf = conf
     restart_conf%restart = .true.
 
@@ -478,7 +478,7 @@ PROGRAM EBM
     tmp = 'mv '//trim(adjustl(filename_albedo))//' '//wrk_dir//filename_base
     call system(tmp)
     ! CHEETAH: COPYING OF CONFIG FILE
-    tmp = 'cp ../config/orb_config.conf '//wrk_dir//filename_base
+    tmp = 'cp ../config/default_config.conf '//wrk_dir//filename_base
     call system(tmp)
 
     !-------------------------- Write input parameters  ----------------------  
